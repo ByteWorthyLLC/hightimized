@@ -1,0 +1,26 @@
+@keyframes badgeEntrance {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: 4px;
+  background: var(--flag-red);
+  color: var(--flag-red-text);
+  border: 1px solid var(--flag-red-border);
+  font-family: var(--mono);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  height: 24px;
+  animation: badgeEntrance 200ms ease-out;
+}
