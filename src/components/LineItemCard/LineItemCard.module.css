@@ -1,0 +1,81 @@
+.card {
+  display: block;
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  min-height: 56px;
+  font-family: var(--sans);
+  background: var(--bg);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-md);
+}
+
+.flagged {
+  border-left: 3px solid var(--flag-red);
+  background: #fff9f9;
+  cursor: pointer;
+}
+
+@media (prefers-color-scheme: dark) {
+  .flagged {
+    background: #1f1515;
+  }
+}
+
+.flagged:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.code {
+  font-family: var(--mono);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-h);
+  min-width: 64px;
+}
+
+.description {
+  flex: 1 1 auto;
+  font-size: 16px;
+  color: var(--text-h);
+  font-weight: 400;
+}
+
+.amount {
+  font-family: var(--mono);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-h);
+  text-align: right;
+  margin-left: auto;
+}
+
+@media (max-width: 639px) {
+  .description,
+  .amount {
+    flex-basis: 100%;
+  }
+}
+
+/* CSS-only chevron caret via border trick */
+.caret {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid var(--text-h);
+  border-bottom: 2px solid var(--text-h);
+  transform: rotate(-45deg);
+  transition: transform 200ms ease-in-out;
+  flex-shrink: 0;
+}
+
+.caretExpanded {
+  transform: rotate(45deg);
+}
