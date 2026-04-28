@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v0.1.0
 milestone_name: milestone
 status: Ready to execute
-last_updated: "2026-04-28T23:02:57.879Z"
+last_updated: "2026-04-28T23:10:18.715Z"
 progress:
   total_phases: 7
   completed_phases: 1
   total_plans: 19
-  completed_plans: 15
-  percent: 79
+  completed_plans: 16
+  percent: 84
 ---
 
 # State: hightimized
@@ -103,6 +103,8 @@ Practical implications all phases must honor:
 - [Phase 01-vertical-slice]: 01-05: File path src/lib/parser/ (not src/lib/auditor/ from RESEARCH.md) — parser and auditor are separate concerns; /,/g used instead of replace(',','') to handle all commas in multi-thousand charges
 - [Phase 01]: StandardFonts only in Phase 1 — @pdf-lib/fontkit excluded until Phase 3 custom fonts
 - [Phase 01]: Multi-line growth test threshold set to +100 bytes — pdf-lib deduplicates font objects, actual delta ~136 bytes per added flagged line
+- [Phase 01-vertical-slice]: Used act() wrapper around fireEvent.drop because react-dropzone processes drop events asynchronously in jsdom
+- [Phase 01-vertical-slice]: DropZone dragging state driven by isDragActive from useDropzone — not a prop-controlled state; idle/dragging blocks are mutually exclusive in render
 
 ## Last Action
 
