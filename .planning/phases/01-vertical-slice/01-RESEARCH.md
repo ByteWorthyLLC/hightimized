@@ -1246,14 +1246,14 @@ globIgnores: ['**/*.gguf', 'data/build/**', 'tesseract/**', 'sql-wasm.wasm']
 
 ---
 
-## Open Questions
+## Open Questions (RESOLVED)
 
-1. **tesseract.js-core WASM file size in public/**
+1. **tesseract.js-core WASM file size in public/** — RESOLVED: commit tesseract WASM directly to `public/tesseract/` for Phase 1; Phase 5 revisits when service worker precache budget matters.
    - What we know: 4 WASM files + worker.min.js + eng.traineddata.gz total ~10MB.
    - What is unclear: Committing 10MB to git slows `git clone` and occupies GitHub storage. Alternative: `postinstall` downloads from jsDelivr CDN.
    - Recommendation: For Phase 1 (solo dev, no contributors), commit to `public/tesseract/` and add to `.gitignore` exception. Phase 5 (PWA polish) can migrate to a postinstall download script when the repo is public.
 
-2. **vite-plugin-pwa globIgnores after adding public/tesseract/**
+2. **vite-plugin-pwa globIgnores after adding public/tesseract/** — RESOLVED: Plan 01 already specifies the exact globIgnores pattern: `['**/*.gguf', 'data/build/**', 'tesseract/**']`. Verify after first `pnpm build`.
    - What we know: Current config has `globIgnores: ['**/*.gguf', 'data/build/**']`.
    - What is unclear: Whether `'tesseract/**'` correctly excludes `public/tesseract/` files from the SW precache in Workbox. Pattern is relative to the output root.
    - Recommendation: Add `'tesseract/**'` and `'sql-wasm.wasm'` to `globIgnores`. Verify after `pnpm build` that `sw.js` does not list these files.
