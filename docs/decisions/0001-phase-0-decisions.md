@@ -16,7 +16,7 @@ architectural and legal decisions before product code begins.
 |---|----------|-----------|
 | 1 | No CPT dictionary bundled | AMA holds CPT copyright. HCPCS Level II is public domain. User's own bill carries CPT codes. |
 | 2 | UPL framing: "audit assist + form letter generator. Not legal advice." | Persistent banner; no jurisdiction-specific strategy; no court-filing templates in v1. |
-| 3 | Upstream anti-overlap: patient-side only | ByteWorthyLLC org; zero RCM/denials/prior-auth language; README audited before Phase 1 promotion. |
+| 3 | Upstream anti-overlap: patient-side only | ByteWorthyLLC org; patient dispute + audit only; provider-side billing workflows explicitly out of scope; README audited before Phase 1 promotion. |
 | 4 | CMS MRF scope: national + top-30 metro medians | Bundle target ~10-30MB; full granularity exceeds budget. |
 | 5 | State UDAP v1: top-10 states by population | CA, TX, FL, NY, PA, IL, OH, GA, NC, MI. v2 adds remaining 40. |
 | 6 | Federal regs bundled inline: 45 CFR §180 + No Surprises Act + HHS-OIG format | Full text, not citations only. All public domain. |
