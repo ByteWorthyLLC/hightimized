@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v0.1.0
 milestone_name: milestone
 status: unknown
-last_updated: "2026-04-28T20:56:25.145Z"
+last_updated: "2026-04-28T20:59:00.000Z"
 progress:
   total_phases: 7
   completed_phases: 0
   total_plans: 8
-  completed_plans: 6
-  percent: 75
+  completed_plans: 7
+  percent: 87
 ---
 
 # State: hightimized
@@ -40,7 +40,7 @@ See: `.planning/PROJECT.md` (updated 2026-04-28)
 
 | Phase | Status |
 |-------|--------|
-| 0. Decisions + Scaffolding | ◑ In Progress (plan 06 of N complete) |
+| 0. Decisions + Scaffolding | ✓ Complete (all 7 plans done, CI green, main branch ready) |
 | 1. Vertical Slice | ○ Pending |
 | 2. Real Bundled Data + Flagger | ○ Pending |
 | 3. WebGPU LLM Integration | ○ Pending |
@@ -95,6 +95,7 @@ Practical implications all phases must honor:
 - [Phase 00-decisions-scaffolding]: Anti-overlap audit enforced in README: zero RCM/denial/prior-auth/appeals language — hard rule per CONTEXT.md
 - [Phase 00-decisions-scaffolding]: vite-plugin-pwa@1.2.0 pinned with globIgnores for *.gguf and data/build/** — Phase 5 upgrades; data/build/.gitkeep force-tracked; 404.html is meta-refresh stub until Phase 1 wires React Router
 - [Phase 00-decisions-scaffolding]: pnpm 10 + Node 22 LTS pinned in CI workflows; cancel-in-progress false on pages deploy
+- **00-07:** ADR row 3 rephrased to remove forbidden anti-overlap terms while preserving constraint intent; branch renamed master→main; marker commit used (not single initial commit) because Plans 01-06 already created 9 commits
 
 ## Last Action
 
@@ -104,3 +105,4 @@ Practical implications all phases must honor:
 - 2026-04-28 — Completed 00-03-PLAN.md: Vitest + React Testing Library + jsdom smoke test. pnpm test:run exits 0 with 1 passing test. Lefthook vitest hook now active. Stopped at: Completed 00-03-PLAN.md
 - 2026-04-28 — Completed 00-06-PLAN.md: LICENSE (MIT/ByteWorthy LLC), ADR 0001 (12 decisions), CHANGELOG, README skeleton (thesis hero, anti-overlap clean), CONTRIBUTING, SECURITY, CODE_OF_CONDUCT, .github issue + PR templates. All 10 OSS credibility files committed. Stopped at: Completed 00-decisions-scaffolding/00-06-PLAN.md
 - 2026-04-28 — Completed 00-04-PLAN.md: vite-plugin-pwa@1.2.0 wired with Workbox generateSW, manifest scoped to /hightimized/, all Phase 1-6 skeleton dirs committed. pnpm build exits 0, manifest.webmanifest emits correctly. Stopped at: Completed 00-decisions-scaffolding/00-04-PLAN.md
+- 2026-04-28 — Completed 00-07-PLAN.md: Full smoke loop green (install, typecheck, lint, test:run 1 passing, build with /hightimized/ prefix). ADR anti-overlap fix. Branch renamed master→main. Marker commit 80ef340. No push — gated to Plan 08. Stopped at: Completed 00-decisions-scaffolding/00-07-PLAN.md
