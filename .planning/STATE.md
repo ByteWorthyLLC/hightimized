@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v0.1.0
 milestone_name: milestone
 status: Ready to execute
-last_updated: "2026-04-28T23:19:16.916Z"
+last_updated: "2026-04-28T23:25:07.737Z"
 progress:
   total_phases: 7
   completed_phases: 1
   total_plans: 19
-  completed_plans: 17
-  percent: 89
+  completed_plans: 18
+  percent: 95
 ---
 
 # State: hightimized
@@ -107,6 +107,7 @@ Practical implications all phases must honor:
 - [Phase 01-vertical-slice]: DropZone dragging state driven by isDragActive from useDropzone — not a prop-controlled state; idle/dragging blocks are mutually exclusive in render
 - [Phase 01-vertical-slice]: article>.row+TraceDetail sibling pattern: outer article display:block, inner .row is flex container, TraceDetail sibling spans full width outside flex
 - [Phase 01-vertical-slice]: HTML hidden attribute on TraceDetail: removes from a11y tree + layout (CSS display:none only removes from layout)
+- [Phase 01-vertical-slice]: aria-disabled not disabled attr on GenerateLetterButton — keeps button focusable so screen readers read disabled-state copy
 
 ## Last Action
 
