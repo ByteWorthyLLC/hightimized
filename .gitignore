@@ -1,0 +1,39 @@
+# Dependencies
+node_modules
+
+# Build outputs
+dist
+dist-ssr
+
+# Vite cache
+.vite
+
+# Data pipeline outputs (Phase 2+)
+data/build/
+
+# Test coverage
+coverage
+*.lcov
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Editor
+.vscode
+.idea
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# TypeScript incremental build
+*.tsbuildinfo
