@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v0.1.0
 milestone_name: milestone
 status: Ready to execute
-last_updated: "2026-04-28T22:39:47Z"
+last_updated: "2026-04-28T23:02:57.879Z"
 progress:
   total_phases: 7
   completed_phases: 1
   total_plans: 19
-  completed_plans: 14
-  percent: 74
+  completed_plans: 15
+  percent: 79
 ---
 
 # State: hightimized
@@ -101,6 +101,8 @@ Practical implications all phases must honor:
 - [Phase 01-vertical-slice]: 01-03: Hardcoded WASM locateFile path (SQL_WASM_PATH constant) to eliminate semgrep CWE-22 path-traversal finding; data/build/* glob used in .gitignore (not data/build/ directory) so !data/build/chargemaster.sqlite negation can un-ignore the committed seed binary
 - [Phase 01-vertical-slice]: 01-04: pdfjs v5 RenderParameters.canvas is required — pass HTMLCanvasElement explicitly alongside canvasContext; HTMLCanvasElement.prototype.getContext stubbed via unknown cast in jsdom tests
 - [Phase 01-vertical-slice]: 01-05: File path src/lib/parser/ (not src/lib/auditor/ from RESEARCH.md) — parser and auditor are separate concerns; /,/g used instead of replace(',','') to handle all commas in multi-thousand charges
+- [Phase 01]: StandardFonts only in Phase 1 — @pdf-lib/fontkit excluded until Phase 3 custom fonts
+- [Phase 01]: Multi-line growth test threshold set to +100 bytes — pdf-lib deduplicates font objects, actual delta ~136 bytes per added flagged line
 
 ## Last Action
 
@@ -114,3 +116,4 @@ Practical implications all phases must honor:
 - 2026-04-28 — Completed 01-01-PLAN.md: All 5 production deps + tsx installed at exact pinned versions. tesseract.js WASM (4 variants + worker + eng.traineddata.gz 11MB) and sql.js WASM (660KB) self-hosted under public/. vite.config.ts globIgnores extended. pnpm build exits 0, sw.js precache excludes all WASM. Stopped at: Completed 01-vertical-slice/01-01-PLAN.md
 - 2026-04-28 — Completed 01-05-PLAN.md: parseBillText pure regex parser implemented. 7 Vitest tests pass (fixture extraction, CPT/HCPCS, thousands commas, lastIndex reset). pnpm typecheck + test:run + lint all exit 0. Stopped at: Completed 01-vertical-slice/01-05-PLAN.md
 - 2026-04-28 — Completed 01-06-PLAN.md: sqliteClient.ts + chargemasterDb.ts + flagLine.ts implemented. 6 Vitest tests pass. @types/sql.js added. All gates exit 0. Stopped at: Completed 01-vertical-slice/01-06-PLAN.md
+- 2026-04-28 — Completed 01-07-PLAN.md: generateDisputeLetter.ts implemented using pdf-lib StandardFonts.TimesRoman. FlaggedLine interface exported. 4 Vitest tests pass (type, magic bytes, size, multi-line growth). pnpm typecheck + test:run + lint all exit 0. LETTER-01 satisfied. Stopped at: Completed 01-vertical-slice/01-07-PLAN.md

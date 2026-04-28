@@ -75,7 +75,7 @@ Plans:
 - [x] 01-04-PLAN.md — Browser OCR pipeline (pdfjs-dist canvas + tesseract.js)
 - [x] 01-05-PLAN.md — Pure-TS line-item parser (regex)
 - [x] 01-06-PLAN.md — sql.js client + chargemaster lookup + flagLine (rule 1)
-- [ ] 01-07-PLAN.md — pdf-lib stub dispute letter generator (StandardFonts only)
+- [x] 01-07-PLAN.md — pdf-lib stub dispute letter generator (StandardFonts only)
 - [ ] 01-08-PLAN.md — PrivacyBanner + DropZone components + design tokens
 - [ ] 01-09-PLAN.md — LineItemCard + FlagBadge + TraceDetail components
 - [ ] 01-10-PLAN.md — GenerateLetterButton + ToastError components
