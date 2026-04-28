@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v0.1.0
 milestone_name: milestone
 status: Ready to execute
-last_updated: "2026-04-28T23:25:07.737Z"
+last_updated: "2026-04-28T23:31:38Z"
 progress:
   total_phases: 7
-  completed_phases: 1
+  completed_phases: 2
   total_plans: 19
-  completed_plans: 18
-  percent: 95
+  completed_plans: 19
+  percent: 100
 ---
 
 # State: hightimized
@@ -41,7 +41,7 @@ See: `.planning/PROJECT.md` (updated 2026-04-28)
 | Phase | Status |
 |-------|--------|
 | 0. Decisions + Scaffolding | ✓ Complete (all 7 plans done, CI green, main branch ready) |
-| 1. Vertical Slice | ◑ In Progress (6/11 plans done) |
+| 1. Vertical Slice | ✓ Complete (all 11 plans done, 39 tests green, build clean) |
 | 2. Real Bundled Data + Flagger | ○ Pending |
 | 3. WebGPU LLM Integration | ○ Pending |
 | 4. Persistence + Export | ○ Pending |
@@ -108,6 +108,7 @@ Practical implications all phases must honor:
 - [Phase 01-vertical-slice]: article>.row+TraceDetail sibling pattern: outer article display:block, inner .row is flex container, TraceDetail sibling spans full width outside flex
 - [Phase 01-vertical-slice]: HTML hidden attribute on TraceDetail: removes from a11y tree + layout (CSS display:none only removes from layout)
 - [Phase 01-vertical-slice]: aria-disabled not disabled attr on GenerateLetterButton — keeps button focusable so screen readers read disabled-state copy
+- [Phase 01-vertical-slice]: 01-11: letter-generating phase added to AuditStatus (beyond RESEARCH.md spec) — carries lineItems forward so line list stays visible during letter generation; vi.hoisted() required for mock spy variables referenced inside vi.mock factories; Blob([bytes.buffer as ArrayBuffer]) resolves TypeScript strict Uint8Array<ArrayBufferLike> incompatibility
 
 ## Last Action
 
@@ -122,3 +123,4 @@ Practical implications all phases must honor:
 - 2026-04-28 — Completed 01-05-PLAN.md: parseBillText pure regex parser implemented. 7 Vitest tests pass (fixture extraction, CPT/HCPCS, thousands commas, lastIndex reset). pnpm typecheck + test:run + lint all exit 0. Stopped at: Completed 01-vertical-slice/01-05-PLAN.md
 - 2026-04-28 — Completed 01-06-PLAN.md: sqliteClient.ts + chargemasterDb.ts + flagLine.ts implemented. 6 Vitest tests pass. @types/sql.js added. All gates exit 0. Stopped at: Completed 01-vertical-slice/01-06-PLAN.md
 - 2026-04-28 — Completed 01-07-PLAN.md: generateDisputeLetter.ts implemented using pdf-lib StandardFonts.TimesRoman. FlaggedLine interface exported. 4 Vitest tests pass (type, magic bytes, size, multi-line growth). pnpm typecheck + test:run + lint all exit 0. LETTER-01 satisfied. Stopped at: Completed 01-vertical-slice/01-07-PLAN.md
+- 2026-04-28 — Completed 01-11-PLAN.md: App.tsx rewritten with useReducer audit state machine (idle/ocr-loading/parsing/audited/letter-generating). All 5 lib modules + 4 UI components wired. Integration smoke test (4 tests, mocked WASM, <1s). 39/39 tests pass. pnpm typecheck + lint + build all exit 0. Phase 1 Vertical Slice COMPLETE. INGEST-01, OCR-01, OCR-02, LETTER-01 all satisfied. Stopped at: Completed 01-vertical-slice/01-11-PLAN.md

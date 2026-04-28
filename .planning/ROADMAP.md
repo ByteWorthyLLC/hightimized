@@ -79,7 +79,7 @@ Plans:
 - [x] 01-08-PLAN.md — PrivacyBanner + DropZone components + design tokens
 - [x] 01-09-PLAN.md — LineItemCard + FlagBadge + TraceDetail components
 - [x] 01-10-PLAN.md — GenerateLetterButton + ToastError components
-- [ ] 01-11-PLAN.md — App.tsx integration: useReducer state machine wiring all of the above
+- [x] 01-11-PLAN.md — App.tsx integration: useReducer state machine wiring all of the above
 
 ---
 
