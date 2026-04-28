@@ -12,7 +12,7 @@ export default defineConfig({
         navigateFallbackDenylist: [/\/gguf\//],
         maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,
         globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2}'],
-        globIgnores: ['**/*.gguf', 'data/build/**'],
+        globIgnores: ['**/*.gguf', 'data/build/**', 'tesseract/**', 'sql-wasm.wasm'],
       },
       manifest: {
         name: 'hightimized',
