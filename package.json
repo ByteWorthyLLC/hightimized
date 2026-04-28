@@ -9,7 +9,8 @@
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "postinstall": "lefthook install"
   },
   "dependencies": {
     "react": "19.2.5",
@@ -23,6 +24,7 @@
     "eslint": "10.2.1",
     "eslint-plugin-react-hooks": "7.1.1",
     "eslint-plugin-react-refresh": "0.5.2",
+    "lefthook": "2.1.6",
     "prettier": "3.8.3",
     "typescript": "6.0.3",
     "typescript-eslint": "8.59.1",
@@ -30,7 +32,8 @@
   },
   "pnpm": {
     "onlyBuiltDependencies": [
-      "@swc/core"
+      "@swc/core",
+      "lefthook"
     ]
   }
 }

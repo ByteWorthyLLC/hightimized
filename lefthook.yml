@@ -1,0 +1,20 @@
+pre-commit:
+  parallel: true
+  commands:
+    typecheck:
+      glob: '*.{ts,tsx}'
+      run: pnpm tsc --noEmit
+    eslint:
+      glob: '*.{ts,tsx}'
+      run: pnpm eslint {staged_files}
+    prettier:
+      glob: '*.{ts,tsx,json,md,yaml}'
+      run: pnpm prettier --write {staged_files} && git add {staged_files}
+    vitest:
+      glob: '*.{test,spec}.{ts,tsx}'
+      run: pnpm vitest run --reporter=verbose {staged_files}
+
+pre-push:
+  commands:
+    test-full:
+      run: pnpm test:run
