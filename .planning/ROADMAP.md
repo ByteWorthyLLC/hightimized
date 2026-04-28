@@ -77,7 +77,7 @@ Plans:
 - [x] 01-06-PLAN.md — sql.js client + chargemaster lookup + flagLine (rule 1)
 - [x] 01-07-PLAN.md — pdf-lib stub dispute letter generator (StandardFonts only)
 - [x] 01-08-PLAN.md — PrivacyBanner + DropZone components + design tokens
-- [ ] 01-09-PLAN.md — LineItemCard + FlagBadge + TraceDetail components
+- [x] 01-09-PLAN.md — LineItemCard + FlagBadge + TraceDetail components
 - [ ] 01-10-PLAN.md — GenerateLetterButton + ToastError components
 - [ ] 01-11-PLAN.md — App.tsx integration: useReducer state machine wiring all of the above
 
