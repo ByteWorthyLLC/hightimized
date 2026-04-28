@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v0.1.0
 milestone_name: milestone
 status: unknown
-last_updated: "2026-04-28T20:53:28.807Z"
+last_updated: "2026-04-28T20:56:25.145Z"
 progress:
   total_phases: 7
   completed_phases: 0
   total_plans: 8
-  completed_plans: 5
-  percent: 63
+  completed_plans: 6
+  percent: 75
 ---
 
 # State: hightimized
@@ -94,6 +94,7 @@ Practical implications all phases must honor:
 - [Phase 00-decisions-scaffolding]: README H1 is thesis line 'They charged you high. Get it itemized.' not the project name — builds on OSS README best practice
 - [Phase 00-decisions-scaffolding]: Anti-overlap audit enforced in README: zero RCM/denial/prior-auth/appeals language — hard rule per CONTEXT.md
 - [Phase 00-decisions-scaffolding]: vite-plugin-pwa@1.2.0 pinned with globIgnores for *.gguf and data/build/** — Phase 5 upgrades; data/build/.gitkeep force-tracked; 404.html is meta-refresh stub until Phase 1 wires React Router
+- [Phase 00-decisions-scaffolding]: pnpm 10 + Node 22 LTS pinned in CI workflows; cancel-in-progress false on pages deploy
 
 ## Last Action
 
