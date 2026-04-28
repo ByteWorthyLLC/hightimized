@@ -36,6 +36,18 @@
 
 **UI hint:** no — pure scaffolding phase
 
+**Plans:** 8 plans
+
+Plans:
+- [ ] 00-01-PLAN.md — Vite + TS + React + pnpm scaffold with /hightimized/ base path
+- [ ] 00-02-PLAN.md — ESLint flat config + Prettier + Lefthook + EditorConfig
+- [ ] 00-03-PLAN.md — Vitest + jsdom + Testing Library smoke test
+- [ ] 00-04-PLAN.md — vite-plugin-pwa stub + project skeleton directories
+- [ ] 00-05-PLAN.md — GitHub Actions ci.yml + deploy-pages.yml
+- [ ] 00-06-PLAN.md — LICENSE + README + ADR + CONTRIBUTING + SECURITY + templates
+- [ ] 00-07-PLAN.md — Local smoke test + first git commit (no push)
+- [ ] 00-08-PLAN.md — gh repo create + push + Discussions + Pages source (GATED, autonomous: false)
+
 ---
 
 ## Phase 1: Vertical Slice

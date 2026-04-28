@@ -331,7 +331,7 @@ pre-commit:
 pre-push:
   commands:
     test-full:
-      run: pnpm test --run
+      run: pnpm test:run
 ```
 
 **Notes on Lefthook behavior:**
@@ -852,22 +852,25 @@ Do not open a public issue for security vulnerabilities.
 
 ---
 
-## Open Questions
+## Open Questions (RESOLVED)
 
 1. **GitHub org ownership: ByteWorthyLLC vs byteworthyllc**
    - What we know: GitHub org names are case-insensitive but the canonical display name matters for URLs in README.
    - What's unclear: Is the org already created at `github.com/ByteWorthyLLC`? The user needs to confirm org exists before `gh repo create`.
    - Recommendation: Plan must include a human-gated verification step before repo creation.
+   - **RESOLVED:** Plan 08 Checkpoint 1 (`Confirm ByteWorthyLLC org exists + user authorizes repo creation`) explicitly verifies org existence via browser visit + `gh api orgs/ByteWorthyLLC` before any `gh repo create` runs. The plan halts on `abort` if the org is missing.
 
 2. **GitHub Pages: `byteworthyllc.github.io` vs custom domain**
    - What we know: Phase 0 canonical URL is `byteworthyllc.github.io/hightimized`. Custom domain is Phase 6 deferred.
    - What's unclear: If Pages is already configured on ByteWorthyLLC's org for other projects, there may be a root-level Pages conflict.
    - Recommendation: Confirm in plan that Pages source is set to "GitHub Actions" before deploy workflow runs. Document this as a gated human step.
+   - **RESOLVED:** Plan 08 Task "Set GitHub Pages source to 'GitHub Actions'" is a `checkpoint:human-action` that walks the user through the Settings → Pages UI and verifies via `curl` that the deployed site returns 200 before proceeding. Custom domain is locked out of Phase 0 per CONTEXT.md (deferred to Phase 6).
 
 3. **vite-plugin-pwa + Qwen3 4B GGUF file caching strategy**
    - What we know: Phase 0 only stubs the VitePWA config. The actual caching strategy for WebLLM weights is a Phase 3 concern.
    - What's unclear: Exact file patterns the WebLLM/mlc-ai runtime uses for model caching (opaque cache, Cache API, or OPFS).
    - Recommendation: In Phase 0, configure VitePWA with `globIgnores: ['**/*.gguf']` as a defensive default. Phase 3 research resolves the full strategy.
+   - **RESOLVED:** Plan 04 Task 1 wires `globIgnores: ['**/*.gguf', 'data/build/**']` and `navigateFallbackDenylist: [/\/gguf\//]` into `vite.config.ts` as the defensive default. Phase 3 research will revisit when WebLLM is integrated; the Phase 0 config will not block precache of legitimate static assets.
 
 ---
 
