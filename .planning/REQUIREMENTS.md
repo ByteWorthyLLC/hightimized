@@ -7,15 +7,15 @@
 
 ### Ingest
 
-- [ ] **INGEST-01**: User can drag-drop a hospital bill PDF or image into the page
+- [x] **INGEST-01**: User can drag-drop a hospital bill PDF or image into the page
 - [ ] **INGEST-02**: User can paste a bill from clipboard
 - [ ] **INGEST-03**: Page accepts itemized statements, EOBs, and balance bills as input formats
 - [ ] **INGEST-04**: Page rejects unsupported file types with a clear, non-technical error
 
 ### OCR + Parsing
 
-- [ ] **OCR-01**: Browser-only OCR extracts text from bill PDF/image with no network call
-- [ ] **OCR-02**: Line-item parser extracts CPT/HCPCS code, description, and charge amount per line
+- [x] **OCR-01**: Browser-only OCR extracts text from bill PDF/image with no network call
+- [x] **OCR-02**: Line-item parser extracts CPT/HCPCS code, description, and charge amount per line
 - [ ] **OCR-03**: Parser handles multi-page bills correctly
 - [ ] **OCR-04**: User can manually correct misread line items before audit
 
@@ -38,7 +38,7 @@
 
 ### Dispute Letter Generator
 
-- [ ] **LETTER-01**: User can generate a dispute letter from one or more flagged lines
+- [x] **LETTER-01**: User can generate a dispute letter from one or more flagged lines
 - [ ] **LETTER-02**: Letter cites 45 CFR §180 (Hospital Price Transparency Final Rule) where applicable
 - [ ] **LETTER-03**: Letter cites the No Surprises Act (PL 116-260) for surprise-billing scenarios
 - [ ] **LETTER-04**: Letter cites the user's state UDAP statute (top-10 states bundled v1)

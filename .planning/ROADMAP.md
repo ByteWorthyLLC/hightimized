@@ -69,7 +69,7 @@ Plans:
 **Plans:** 11 plans
 
 Plans:
-- [ ] 01-01-PLAN.md — Install Phase 1 deps + self-host tesseract.js/sql.js WASM + extend Vite globIgnores
+- [x] 01-01-PLAN.md — Install Phase 1 deps + self-host tesseract.js/sql.js WASM + extend Vite globIgnores
 - [ ] 01-02-PLAN.md — Synthetic fixture-bill PDF generator (3 line items targeting the regex)
 - [ ] 01-03-PLAN.md — Phase 1 chargemaster.sqlite seed (single row for CPT 99213)
 - [ ] 01-04-PLAN.md — Browser OCR pipeline (pdfjs-dist canvas + tesseract.js)
