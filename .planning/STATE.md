@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v0.1.0
 milestone_name: milestone
 status: Ready to execute
-last_updated: "2026-04-28T22:31:11.244Z"
+last_updated: "2026-04-28T22:37:08.896Z"
 progress:
   total_phases: 7
   completed_phases: 1
   total_plans: 19
-  completed_plans: 11
-  percent: 58
+  completed_plans: 12
+  percent: 63
 ---
 
 # State: hightimized
@@ -99,6 +99,7 @@ Practical implications all phases must honor:
 - **01-01:** Self-host all WASM/worker files from public/ (not CDN) for $0-cost + zero-API constraint; tesseract.js-core ships relaxedsimd variants in addition to the four standard ones — only standard four copied; eng.traineddata.gz primary URL (tessdata.projectnaptha.com) succeeded at 11MB; tsx resolved to ^4.21.0 (no exact pin in plan)
 - [Phase 01-vertical-slice]: 01-02: ASCII hyphens used for PDF divider rows instead of Unicode U+2500 — StandardFonts.Courier WinAnsi encoding excludes that glyph; fixture line items (99213/85025/J3490) are all-ASCII and unaffected
 - [Phase 01-vertical-slice]: 01-03: Hardcoded WASM locateFile path (SQL_WASM_PATH constant) to eliminate semgrep CWE-22 path-traversal finding; data/build/* glob used in .gitignore (not data/build/ directory) so !data/build/chargemaster.sqlite negation can un-ignore the committed seed binary
+- [Phase 01-vertical-slice]: 01-04: pdfjs v5 RenderParameters.canvas is required — pass HTMLCanvasElement explicitly alongside canvasContext; HTMLCanvasElement.prototype.getContext stubbed via unknown cast in jsdom tests
 
 ## Last Action
 
