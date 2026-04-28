@@ -26,7 +26,7 @@ See: `.planning/PROJECT.md` (updated 2026-04-28)
 
 | Phase | Status |
 |-------|--------|
-| 0. Decisions + Scaffolding | ◑ In Progress (plan 02 of N complete) |
+| 0. Decisions + Scaffolding | ◑ In Progress (plan 03 of N complete) |
 | 1. Vertical Slice | ○ Pending |
 | 2. Real Bundled Data + Flagger | ○ Pending |
 | 3. WebGPU LLM Integration | ○ Pending |
@@ -75,9 +75,11 @@ Practical implications all phases must honor:
 
 - **00-01:** Use @vitejs/plugin-react-swc (not Babel); tsconfig.json is app config only (no project references); types:vite/client added; pnpm.onlyBuiltDependencies approves @swc/core native build
 - **00-02:** lefthook added to pnpm.onlyBuiltDependencies (same non-interactive env pattern as @swc/core); Prettier excludes *.md to preserve README hero line spacing; vitest stanza pre-staged in lefthook.yml so Plan 03 requires no hook changes
+- **00-03:** Smoke test asserts on h1 heading text not image alt attributes (plan example assertion would fail); @vitejs/plugin-react-swc retained in vitest.config.ts per RESEARCH.md Pattern 2 (vite warning is informational only)
 
 ## Last Action
 
 - 2026-04-28 — Project initialized via `/gsd-do` → `/gsd-new-project`. PROJECT.md, REQUIREMENTS.md, ROADMAP.md, STATE.md, config.json all written from PRD `02-hightimized.md`.
 - 2026-04-28 — `/gsd-autonomous --from 0` invoked. Starting full autonomous loop through all 7 phases.
 - 2026-04-28 — Completed 00-02-PLAN.md: ESLint flat config + Prettier + Lefthook + EditorConfig. Stopped at: Completed 00-02-PLAN.md
+- 2026-04-28 — Completed 00-03-PLAN.md: Vitest + React Testing Library + jsdom smoke test. pnpm test:run exits 0 with 1 passing test. Lefthook vitest hook now active. Stopped at: Completed 00-03-PLAN.md

@@ -36,12 +36,12 @@
 
 **UI hint:** no — pure scaffolding phase
 
-**Plans:** 2/8 plans executed
+**Plans:** 3/8 plans executed
 
 Plans:
 - [x] 00-01-PLAN.md — Vite + TS + React + pnpm scaffold with /hightimized/ base path
 - [x] 00-02-PLAN.md — ESLint flat config + Prettier + Lefthook + EditorConfig
-- [ ] 00-03-PLAN.md — Vitest + jsdom + Testing Library smoke test
+- [x] 00-03-PLAN.md — Vitest + jsdom + Testing Library smoke test
 - [ ] 00-04-PLAN.md — vite-plugin-pwa stub + project skeleton directories
 - [ ] 00-05-PLAN.md — GitHub Actions ci.yml + deploy-pages.yml
 - [ ] 00-06-PLAN.md — LICENSE + README + ADR + CONTRIBUTING + SECURITY + templates
