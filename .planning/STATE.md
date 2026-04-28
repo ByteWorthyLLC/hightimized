@@ -8,8 +8,8 @@ progress:
   total_phases: 7
   completed_phases: 1
   total_plans: 19
-  completed_plans: 13
-  percent: 68
+  completed_plans: 14
+  percent: 74
 ---
 
 # State: hightimized
@@ -41,7 +41,7 @@ See: `.planning/PROJECT.md` (updated 2026-04-28)
 | Phase | Status |
 |-------|--------|
 | 0. Decisions + Scaffolding | ✓ Complete (all 7 plans done, CI green, main branch ready) |
-| 1. Vertical Slice | ◑ In Progress (5/11 plans done) |
+| 1. Vertical Slice | ◑ In Progress (6/11 plans done) |
 | 2. Real Bundled Data + Flagger | ○ Pending |
 | 3. WebGPU LLM Integration | ○ Pending |
 | 4. Persistence + Export | ○ Pending |
@@ -113,3 +113,4 @@ Practical implications all phases must honor:
 - 2026-04-28 — Completed 00-07-PLAN.md: Full smoke loop green (install, typecheck, lint, test:run 1 passing, build with /hightimized/ prefix). ADR anti-overlap fix. Branch renamed master→main. Marker commit 80ef340. No push — gated to Plan 08. Stopped at: Completed 00-decisions-scaffolding/00-07-PLAN.md
 - 2026-04-28 — Completed 01-01-PLAN.md: All 5 production deps + tsx installed at exact pinned versions. tesseract.js WASM (4 variants + worker + eng.traineddata.gz 11MB) and sql.js WASM (660KB) self-hosted under public/. vite.config.ts globIgnores extended. pnpm build exits 0, sw.js precache excludes all WASM. Stopped at: Completed 01-vertical-slice/01-01-PLAN.md
 - 2026-04-28 — Completed 01-05-PLAN.md: parseBillText pure regex parser implemented. 7 Vitest tests pass (fixture extraction, CPT/HCPCS, thousands commas, lastIndex reset). pnpm typecheck + test:run + lint all exit 0. Stopped at: Completed 01-vertical-slice/01-05-PLAN.md
+- 2026-04-28 — Completed 01-06-PLAN.md: sqliteClient.ts + chargemasterDb.ts + flagLine.ts implemented. 6 Vitest tests pass. @types/sql.js added. All gates exit 0. Stopped at: Completed 01-vertical-slice/01-06-PLAN.md
