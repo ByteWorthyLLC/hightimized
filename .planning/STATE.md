@@ -1,3 +1,17 @@
+---
+gsd_state_version: 1.0
+milestone: v0.1.0
+milestone_name: milestone
+status: unknown
+last_updated: "2026-04-28T20:49:51.903Z"
+progress:
+  total_phases: 7
+  completed_phases: 0
+  total_plans: 8
+  completed_plans: 4
+  percent: 50
+---
+
 # State: hightimized
 
 ## Project Reference
@@ -26,7 +40,7 @@ See: `.planning/PROJECT.md` (updated 2026-04-28)
 
 | Phase | Status |
 |-------|--------|
-| 0. Decisions + Scaffolding | ◑ In Progress (plan 03 of N complete) |
+| 0. Decisions + Scaffolding | ◑ In Progress (plan 06 of N complete) |
 | 1. Vertical Slice | ○ Pending |
 | 2. Real Bundled Data + Flagger | ○ Pending |
 | 3. WebGPU LLM Integration | ○ Pending |
@@ -52,6 +66,7 @@ User invoked `/gsd-autonomous --from 0` with these additional asks:
 5. **Tone constraint**: marketing voice is direct, not salesy. Match Upstream Intelligence brand voice (real numbers, real receipts, no fluff). Reference `~/.claude/personas/jack-dorsey.md` (single thesis, edit don't add).
 
 Phases that absorb this:
+
 - **Phase 0** — repo creation, GitHub Discussions on, MIT license, initial commit
 - **Phase 5** — PWA polish (the page itself becomes part of the marketing surface)
 - **Phase 6** — README hero + demo video + landing page deployment + Show HN/Twitter drafts
@@ -76,6 +91,8 @@ Practical implications all phases must honor:
 - **00-01:** Use @vitejs/plugin-react-swc (not Babel); tsconfig.json is app config only (no project references); types:vite/client added; pnpm.onlyBuiltDependencies approves @swc/core native build
 - **00-02:** lefthook added to pnpm.onlyBuiltDependencies (same non-interactive env pattern as @swc/core); Prettier excludes *.md to preserve README hero line spacing; vitest stanza pre-staged in lefthook.yml so Plan 03 requires no hook changes
 - **00-03:** Smoke test asserts on h1 heading text not image alt attributes (plan example assertion would fail); @vitejs/plugin-react-swc retained in vitest.config.ts per RESEARCH.md Pattern 2 (vite warning is informational only)
+- [Phase 00-decisions-scaffolding]: README H1 is thesis line 'They charged you high. Get it itemized.' not the project name — builds on OSS README best practice
+- [Phase 00-decisions-scaffolding]: Anti-overlap audit enforced in README: zero RCM/denial/prior-auth/appeals language — hard rule per CONTEXT.md
 
 ## Last Action
 
@@ -83,3 +100,4 @@ Practical implications all phases must honor:
 - 2026-04-28 — `/gsd-autonomous --from 0` invoked. Starting full autonomous loop through all 7 phases.
 - 2026-04-28 — Completed 00-02-PLAN.md: ESLint flat config + Prettier + Lefthook + EditorConfig. Stopped at: Completed 00-02-PLAN.md
 - 2026-04-28 — Completed 00-03-PLAN.md: Vitest + React Testing Library + jsdom smoke test. pnpm test:run exits 0 with 1 passing test. Lefthook vitest hook now active. Stopped at: Completed 00-03-PLAN.md
+- 2026-04-28 — Completed 00-06-PLAN.md: LICENSE (MIT/ByteWorthy LLC), ADR 0001 (12 decisions), CHANGELOG, README skeleton (thesis hero, anti-overlap clean), CONTRIBUTING, SECURITY, CODE_OF_CONDUCT, .github issue + PR templates. All 10 OSS credibility files committed. Stopped at: Completed 00-decisions-scaffolding/00-06-PLAN.md
