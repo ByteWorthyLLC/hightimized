@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v0.1.0
 milestone_name: milestone
 status: Ready to execute
-last_updated: "2026-04-28T22:37:08.896Z"
+last_updated: "2026-04-28T22:39:47Z"
 progress:
   total_phases: 7
   completed_phases: 1
   total_plans: 19
-  completed_plans: 12
-  percent: 63
+  completed_plans: 13
+  percent: 68
 ---
 
 # State: hightimized
@@ -41,7 +41,7 @@ See: `.planning/PROJECT.md` (updated 2026-04-28)
 | Phase | Status |
 |-------|--------|
 | 0. Decisions + Scaffolding | ✓ Complete (all 7 plans done, CI green, main branch ready) |
-| 1. Vertical Slice | ◑ In Progress (1/11 plans done) |
+| 1. Vertical Slice | ◑ In Progress (5/11 plans done) |
 | 2. Real Bundled Data + Flagger | ○ Pending |
 | 3. WebGPU LLM Integration | ○ Pending |
 | 4. Persistence + Export | ○ Pending |
@@ -100,6 +100,7 @@ Practical implications all phases must honor:
 - [Phase 01-vertical-slice]: 01-02: ASCII hyphens used for PDF divider rows instead of Unicode U+2500 — StandardFonts.Courier WinAnsi encoding excludes that glyph; fixture line items (99213/85025/J3490) are all-ASCII and unaffected
 - [Phase 01-vertical-slice]: 01-03: Hardcoded WASM locateFile path (SQL_WASM_PATH constant) to eliminate semgrep CWE-22 path-traversal finding; data/build/* glob used in .gitignore (not data/build/ directory) so !data/build/chargemaster.sqlite negation can un-ignore the committed seed binary
 - [Phase 01-vertical-slice]: 01-04: pdfjs v5 RenderParameters.canvas is required — pass HTMLCanvasElement explicitly alongside canvasContext; HTMLCanvasElement.prototype.getContext stubbed via unknown cast in jsdom tests
+- [Phase 01-vertical-slice]: 01-05: File path src/lib/parser/ (not src/lib/auditor/ from RESEARCH.md) — parser and auditor are separate concerns; /,/g used instead of replace(',','') to handle all commas in multi-thousand charges
 
 ## Last Action
 
@@ -111,3 +112,4 @@ Practical implications all phases must honor:
 - 2026-04-28 — Completed 00-04-PLAN.md: vite-plugin-pwa@1.2.0 wired with Workbox generateSW, manifest scoped to /hightimized/, all Phase 1-6 skeleton dirs committed. pnpm build exits 0, manifest.webmanifest emits correctly. Stopped at: Completed 00-decisions-scaffolding/00-04-PLAN.md
 - 2026-04-28 — Completed 00-07-PLAN.md: Full smoke loop green (install, typecheck, lint, test:run 1 passing, build with /hightimized/ prefix). ADR anti-overlap fix. Branch renamed master→main. Marker commit 80ef340. No push — gated to Plan 08. Stopped at: Completed 00-decisions-scaffolding/00-07-PLAN.md
 - 2026-04-28 — Completed 01-01-PLAN.md: All 5 production deps + tsx installed at exact pinned versions. tesseract.js WASM (4 variants + worker + eng.traineddata.gz 11MB) and sql.js WASM (660KB) self-hosted under public/. vite.config.ts globIgnores extended. pnpm build exits 0, sw.js precache excludes all WASM. Stopped at: Completed 01-vertical-slice/01-01-PLAN.md
+- 2026-04-28 — Completed 01-05-PLAN.md: parseBillText pure regex parser implemented. 7 Vitest tests pass (fixture extraction, CPT/HCPCS, thousands commas, lastIndex reset). pnpm typecheck + test:run + lint all exit 0. Stopped at: Completed 01-vertical-slice/01-05-PLAN.md
