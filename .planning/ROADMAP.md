@@ -36,7 +36,7 @@
 
 **UI hint:** no — pure scaffolding phase
 
-**Plans:** 7/8 plans executed
+**Plans:** 8/8 plans complete
 
 Plans:
 - [x] 00-01-PLAN.md — Vite + TS + React + pnpm scaffold with /hightimized/ base path
@@ -46,7 +46,7 @@ Plans:
 - [x] 00-05-PLAN.md — GitHub Actions ci.yml + deploy-pages.yml
 - [x] 00-06-PLAN.md — LICENSE + README + ADR + CONTRIBUTING + SECURITY + templates
 - [x] 00-07-PLAN.md — Local smoke test + first git commit (no push) — CI green, branch main, commit 80ef340
-- [ ] 00-08-PLAN.md — gh repo create + push + Discussions + Pages source (GATED, autonomous: false)
+- [x] 00-08-PLAN.md — gh repo create + push + Discussions + Pages source (GATED, autonomous: false)
 
 ---
 
