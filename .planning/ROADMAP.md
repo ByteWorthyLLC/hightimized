@@ -42,7 +42,7 @@ Plans:
 - [x] 00-01-PLAN.md — Vite + TS + React + pnpm scaffold with /hightimized/ base path
 - [x] 00-02-PLAN.md — ESLint flat config + Prettier + Lefthook + EditorConfig
 - [x] 00-03-PLAN.md — Vitest + jsdom + Testing Library smoke test
-- [ ] 00-04-PLAN.md — vite-plugin-pwa stub + project skeleton directories
+- [x] 00-04-PLAN.md — vite-plugin-pwa stub + project skeleton directories
 - [ ] 00-05-PLAN.md — GitHub Actions ci.yml + deploy-pages.yml
 - [x] 00-06-PLAN.md — LICENSE + README + ADR + CONTRIBUTING + SECURITY + templates
 - [ ] 00-07-PLAN.md — Local smoke test + first git commit (no push)
