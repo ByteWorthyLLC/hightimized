@@ -1,0 +1,36 @@
+.trace {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  border-radius: 0 0 8px 8px;
+  padding: var(--space-md);
+  font-family: var(--mono);
+  font-size: 14px;
+  color: var(--text);
+}
+
+.trace[hidden] {
+  display: none;
+}
+
+.row {
+  font-family: var(--mono);
+  font-size: 14px;
+}
+
+.row + .row {
+  margin-top: 4px;
+}
+
+.plain {
+  margin-top: var(--space-md);
+  font-family: var(--sans);
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.plain strong {
+  font-weight: 700;
+  color: var(--text-h);
+}
