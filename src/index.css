@@ -10,6 +10,23 @@
   --social-bg: rgba(244, 243, 236, 0.5);
   --shadow: rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
 
+  /* Spacing scale */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+
+  /* Surface — maps to --code-bg in light mode */
+  --surface: var(--code-bg);
+
+  /* Flag color tokens */
+  --flag-red: #dc2626;
+  --flag-red-text: #ffffff;
+  --flag-red-border: #b91c1c;
+
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
   --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
@@ -41,6 +58,12 @@
     --accent-border: rgba(192, 132, 252, 0.5);
     --social-bg: rgba(47, 48, 58, 0.5);
     --shadow: rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+
+    /* Dark mode overrides */
+    --surface: #1f2028;
+    --flag-red: #7f1d1d;
+    --flag-red-text: #fecaca;
+    --flag-red-border: #991b1b;
   }
 
   #social .button-icon {
@@ -106,4 +129,31 @@ code {
   line-height: 135%;
   padding: 4px 8px;
   background: var(--code-bg);
+}
+
+/* Shared keyframes — used by DropZone spinner, FlagBadge entrance, ToastError */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes badgeEntrance {
+  from { opacity: 0; transform: scale(0.85); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes toastIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes toastOut {
+  to { opacity: 0; }
+}
+
+/* Reduced motion — wraps all keyframe animations */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }
