@@ -9,7 +9,8 @@ dist-ssr
 .vite
 
 # Data pipeline outputs (Phase 2+)
-data/build/
+data/build/*
+!data/build/chargemaster.sqlite
 
 # Test coverage
 coverage
