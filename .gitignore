@@ -37,3 +37,8 @@ Thumbs.db
 
 # TypeScript incremental build
 *.tsbuildinfo
+
+# Phase 1: tesseract WASM and sql.js WASM are committed for $0 hosting
+!public/tesseract/
+!public/tesseract/**
+!public/sql-wasm.wasm
