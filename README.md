@@ -1,73 +1,43 @@
-# React + TypeScript + Vite
+# They charged you high. Get it itemized.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Drag your hospital bill in. Get the receipts back out — including the receipt for the regulation they broke. Without ever uploading the data.
 
-Currently, two official plugins are available:
+<!-- [DEMO VIDEO PLACEHOLDER — Phase 6] -->
+<!-- [HERO GIF: drag → flagged lines → dispute letter — Phase 6] -->
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Try it now
 
-## React Compiler
+**[byteworthyllc.github.io/hightimized](https://byteworthyllc.github.io/hightimized)** — no install, no account, no upload.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## What it does
 
-## Expanding the ESLint configuration
+hightimized audits your hospital bill against the hospital's own publicly-mandated chargemaster,
+flags lines where they charged more than federal law allows, and generates a certified-mail-ready
+dispute letter citing the exact regulation they violated.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+**Your data never leaves your device.** OCR runs in the browser. The chargemaster data is bundled.
+The dispute letter generates locally. Nothing is sent anywhere.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Drag in a hospital bill PDF or image
+- In-browser OCR extracts every line item
+- Bundled CMS chargemaster data flags overcharges automatically
+- Plain-English explanation per flagged line (runs in your browser, no API call)
+- Dispute letter citing 45 CFR §180, No Surprises Act, and your state's UDAP statute
+- PDF renders in the browser — print, sign, mail
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Privacy promise
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Zero upload. No accounts. No telemetry. Bill history stored only in your browser's IndexedDB.
+One-tap wipe. Export as encrypted JSON for portability.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Fork it
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+MIT license. Built for patients. Forkable for legal-aid orgs, state AG offices, ByteWorthy clients.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Contribute
+
+See [CONTRIBUTING.md](CONTRIBUTING.md). Issues and PRs welcome.
+
+## License
+
+MIT © 2026 ByteWorthy LLC
