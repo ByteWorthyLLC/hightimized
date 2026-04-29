@@ -1,11 +1,11 @@
 <div align="center">
-<img src="https://raw.githubusercontent.com/ByteWorthyLLC/hightimized/main/.github/assets/hightimized-hero.svg" alt="hightimized — audit your hospital bill" width="100%">
+<img src="https://raw.githubusercontent.com/ByteWorthyLLC/hightimized/main/.github/assets/hightimized-hero.svg" alt="hightimized: audit your hospital bill" width="100%">
 </div>
 
 [![License](https://img.shields.io/badge/license-MIT-2563EB?style=for-the-badge&labelColor=0F172A)](./LICENSE)
 [![Live demo](https://img.shields.io/badge/try_it-live_demo-F59E0B?style=for-the-badge&labelColor=0F172A)](https://byteworthyllc.github.io/hightimized)
 
-**[byteworthyllc.github.io/hightimized](https://byteworthyllc.github.io/hightimized)** — no install, no account, no upload.
+**[byteworthyllc.github.io/hightimized](https://byteworthyllc.github.io/hightimized)**. No install, no account, no upload.
 
 ## What it does
 
@@ -21,7 +21,7 @@ The dispute letter generates locally. Nothing is sent anywhere.
 - Bundled CMS chargemaster data flags overcharges automatically
 - Plain-English explanation per flagged line (runs in your browser, no API call)
 - Dispute letter citing 45 CFR §180, No Surprises Act, and your state's UDAP statute
-- PDF renders in the browser — print, sign, mail
+- PDF renders in the browser. Print, sign, mail
 
 > **Privacy:** Zero upload. No accounts. No telemetry. Bill history stored only in your browser's IndexedDB. One-tap wipe. Export as encrypted JSON for portability.
 
