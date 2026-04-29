@@ -275,6 +275,11 @@
         border-color: var(--amber-deep);
         color: var(--amber-deep);
       }
+      .button-primary:active,
+      .button-secondary:active {
+        transform: scale(0.97) !important;
+        transition-duration: 60ms !important;
+      }
       .privacy-badge {
         display: inline-flex;
         align-items: center;
@@ -304,6 +309,19 @@
           opacity: 1;
           transform: translateY(0);
         }
+      }
+      @keyframes blinkCursor {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+      }
+      .cursor {
+        display: inline-block;
+        width: 7px;
+        height: 13px;
+        background: var(--amber-deep);
+        animation: blinkCursor 1.1s step-start infinite;
+        vertical-align: middle;
+        margin-left: 4px;
       }
       .reveal-on-load {
         opacity: 0;
@@ -338,6 +356,7 @@
           animation: none;
           transition: none;
         }
+        .cursor { animation: none; opacity: 1; }
         html {
           scroll-behavior: auto;
         }
@@ -383,6 +402,10 @@
         border: 1px solid var(--line);
         box-shadow: var(--shadow-1);
         position: relative;
+        transition: transform 200ms ease, box-shadow 200ms ease;
+      }
+      @media (hover: hover) and (pointer: fine) {
+        .step:hover { transform: translateY(-3px); box-shadow: var(--shadow-2); }
       }
       .step-num {
         font-family: 'Fraunces', Georgia, serif;
@@ -723,7 +746,7 @@
                 <div><span class="key">ocr</span> <span class="val">=</span> <span class="ok">"tesseract.js"</span></div>
                 <div><span class="key">chargemaster</span> <span class="val">=</span> <span class="ok">"bundled (cms)"</span></div>
                 <div><span class="key">dispute_letter</span> <span class="val">=</span> <span class="ok">"rendered locally"</span></div>
-                <div><span class="key">license</span> <span class="val">=</span> <span class="ok">"MIT"</span></div>
+                <div><span class="key">license</span> <span class="val">=</span> <span class="ok">"MIT"</span><span class="cursor" aria-hidden="true"></span></div>
               </div>
             </div>
           </div>
