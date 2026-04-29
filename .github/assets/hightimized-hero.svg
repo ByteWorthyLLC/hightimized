@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="220" viewBox="0 0 1280 220">
+  <rect width="1280" height="220" fill="#0F172A"/>
+  <text x="640" y="82" font-family="'Courier New', Courier, monospace" font-size="48" font-weight="400" fill="#FFFFFF" text-anchor="middle">They charged you high.</text>
+  <text x="640" y="136" font-family="'Courier New', Courier, monospace" font-size="40" font-weight="700" fill="#F59E0B" text-anchor="middle">Get it itemized.</text>
+  <text x="640" y="178" font-family="'Courier New', Courier, monospace" font-size="16" font-weight="400" fill="#94A3B8" text-anchor="middle">Audit your hospital bill. Generate a dispute letter. Browser-only. No upload.</text>
+  <text x="24" y="208" font-family="'Courier New', Courier, monospace" font-size="12" font-weight="400" fill="#475569">{byteworthy}</text>
+</svg>
