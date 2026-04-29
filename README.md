@@ -1,11 +1,9 @@
-# They charged you high. Get it itemized.
+<div align="center">
+<img src="https://raw.githubusercontent.com/ByteWorthyLLC/hightimized/main/.github/assets/hightimized-hero.svg" alt="hightimized — audit your hospital bill" width="100%">
+</div>
 
-> Drag your hospital bill in. Get the receipts back out — including the receipt for the regulation they broke. Without ever uploading the data.
-
-<!-- [DEMO VIDEO PLACEHOLDER — Phase 6] -->
-<!-- [HERO GIF: drag → flagged lines → dispute letter — Phase 6] -->
-
-## Try it now
+[![License](https://img.shields.io/badge/license-MIT-2563EB?style=for-the-badge&labelColor=0F172A)](./LICENSE)
+[![Live demo](https://img.shields.io/badge/try_it-live_demo-F59E0B?style=for-the-badge&labelColor=0F172A)](https://byteworthyllc.github.io/hightimized)
 
 **[byteworthyllc.github.io/hightimized](https://byteworthyllc.github.io/hightimized)** — no install, no account, no upload.
 
@@ -15,7 +13,7 @@ hightimized audits your hospital bill against the hospital's own publicly-mandat
 flags lines where they charged more than federal law allows, and generates a certified-mail-ready
 dispute letter citing the exact regulation they violated.
 
-**Your data never leaves your device.** OCR runs in the browser. The chargemaster data is bundled.
+Your data never leaves your device. OCR runs in the browser. The chargemaster data is bundled.
 The dispute letter generates locally. Nothing is sent anywhere.
 
 - Drag in a hospital bill PDF or image
@@ -25,10 +23,7 @@ The dispute letter generates locally. Nothing is sent anywhere.
 - Dispute letter citing 45 CFR §180, No Surprises Act, and your state's UDAP statute
 - PDF renders in the browser — print, sign, mail
 
-## Privacy promise
-
-Zero upload. No accounts. No telemetry. Bill history stored only in your browser's IndexedDB.
-One-tap wipe. Export as encrypted JSON for portability.
+> **Privacy:** Zero upload. No accounts. No telemetry. Bill history stored only in your browser's IndexedDB. One-tap wipe. Export as encrypted JSON for portability.
 
 ## Fork it
 
