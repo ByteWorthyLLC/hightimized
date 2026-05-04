@@ -222,6 +222,47 @@ export default function App() {
       {error ? (
         <ToastError title={error.title} body={error.body} onDismiss={() => setError(null)} />
       ) : null}
+      <footer className={styles.ecosystemFooter}>
+        <p className={styles.ecosystemLabel}>More from ByteWorthy</p>
+        <div className={styles.ecosystemGrid}>
+          <a
+            href="https://github.com/ByteWorthyLLC/outbreaktinder"
+            className={styles.ecosystemCard}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <strong>OutbreakTinder</strong>
+            <span>Swipe through history's deadliest outbreaks. Every fact cited.</span>
+          </a>
+          <a
+            href="https://github.com/ByteWorthyLLC/honeypot-med"
+            className={styles.ecosystemCard}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <strong>honeypot-med</strong>
+            <span>How healthcare middlemen mark up your care. 27-page investigation.</span>
+          </a>
+          <a
+            href="https://github.com/ByteWorthyLLC/vqol"
+            className={styles.ecosystemCard}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <strong>vqol</strong>
+            <span>Track quality-of-life after a vet diagnosis. Visual timeline.</span>
+          </a>
+          <a
+            href="https://github.com/ByteWorthyLLC/sovra"
+            className={styles.ecosystemCard}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <strong>sovra</strong>
+            <span>Browser-first financial sovereignty tools. No cloud.</span>
+          </a>
+        </div>
+      </footer>
     </>
   )
 }

@@ -23,3 +23,64 @@
     padding-top: var(--space-xl);
   }
 }
+
+/* Ecosystem footer */
+.ecosystemFooter {
+  width: 100%;
+  max-width: 672px;
+  margin: 0 auto;
+  padding: var(--space-2xl) var(--space-md) var(--space-xl);
+  box-sizing: border-box;
+}
+
+.ecosystemLabel {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text);
+  opacity: 0.6;
+  margin-bottom: var(--space-md);
+  text-align: left;
+}
+
+.ecosystemGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-sm);
+}
+
+.ecosystemCard {
+  display: block;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: 8px;
+  text-decoration: none;
+  text-align: left;
+  transition: background 0.15s ease-out;
+}
+
+.ecosystemCard:hover,
+.ecosystemCard:focus-visible {
+  background: var(--surface);
+}
+
+.ecosystemCard strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 2px;
+}
+
+.ecosystemCard span {
+  display: block;
+  font-size: 12px;
+  color: var(--text);
+  line-height: 1.45;
+}
+
+@media (max-width: 639px) {
+  .ecosystemGrid {
+    grid-template-columns: 1fr;
+  }
+}
