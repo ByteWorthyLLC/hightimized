@@ -123,6 +123,15 @@ None — no external service configuration required.
 - CPT 99213 row: hospital_published_rate=187.50, regional_median=198.00, medicare_allowable=92.40 — fixture's $750 charge yields 4.0× multiplier, which fires the flagger
 - Phase 2 will replace this file with the real CMS MRF pipeline output; schema stays compatible
 
+## Self-Check: PASSED
+
+- FOUND: scripts/build-data/seed-phase-1.ts
+- FOUND: data/build/chargemaster.sqlite (SQLite 3.x, 12KB)
+- FOUND: .planning/phases/01-vertical-slice/01-03-SUMMARY.md
+- FOUND: commit 05a0434 (feat: seed script)
+- FOUND: commit 2646a2e (chore: gitignore + sqlite binary)
+- git check-ignore exit code: 1 (file NOT ignored — correct)
+
 ---
 *Phase: 01-vertical-slice*
 *Completed: 2026-04-28*
